@@ -3,34 +3,24 @@ Rails.application.routes.draw do
   # ===================
 
   get("/lottery/lucky", { :controller => "numbers", :action => "winners" })
+  get("/lottery/unlucky", { :controller => "numbers", :action => "losers" })
+  get("/zodiacs/aries", { :controller => "fire", :action => "ram" })
+  get("/zodiacs/taurus", { :controller => "earth", :action => "bull" })
+  get("/zodiacs/gemini", { :controller => "air", :action => "twins" })
+  get("/zodiacs/cancer", { :controller => "water", :action => "crab" })
+  get("/zodiacs/leo", { :controller => "fire", :action => "lion" })
+  get("/zodiacs/virgo", { :controller => "earth", :action => "maiden" })
+  get("/zodiacs/libra", { :controller => "air", :action => "scales" })
+  get("/zodiacs/scorpio", { :controller => "water", :action => "scorpion" })
   get("/", { :controller => "numbers", :action => "winners" })
-
-  # Let users visit URLs:
-
-  # - /lottery/unlucky
-
-  # PART 2: R→C→A→V DEBUGGING
-  # ======================
-
-  # Uncomment each route below ONE AT A TIME and debug.
-  # Do NOT uncomment more than one at a time, or you'll be dealing with multiple syntax errors at once.
-
-  # get("/zodiacs/aries", { :controller =>  fire, action =>  "ram" })
-  # get("/zodiacs/leo", { :controller => "fire", :action => "lion" })
-  # get("/zodiacs/sagittarius" { :controller => "fire", :action => "archer" })
+  get("/zodiacs/sagittarius", { :controller => "fire", :action => "archer" })
+  get("/zodiacs/capricorn", { :controller => "earth", :action => "goat" })
+  get("/zodiacs/aquarius", { :controller => "air", :action => "waterbearer" })
+  get("/zodiacs/pisces", { :controller => "water", :action => "fish" })
+  get("/roll/1/6", { :controller => "numbers", :action => "onedsix"})
+  get("/roll/2/6", { :controller => "numbers", :action => "twodsix"})
+  get("/roll/3/6", { :controller => "numbers", :action => "threedsix"})
   
-  # get("/zodiacs/taurus", { :controller, "earth", :action, "bull" })
-  # get("/zodiacs/virgo", { :controller => "earth", :action => "maiden" })
-  # get("/zodiacs/capricorn", { :controller => "earth", :action => "goat" })
-  
-  # get("/zodiacs/gemini", { :controller => "air", :action => "twins" })
-  # get(" /zodiacs/libra", { :controller => "air", :action => "scales" })
-  # get ("/zodiacs/aquarius", { :controller => "air", :action => "waterbearer" })
-  
-  # get("/zodiacs/cancer " { :controller => "earth" :action => "crab" })
-  # get("/zodiac/ scorpio", { :controller => "Water", :action => "scorpion" })
-  # get("/zodiacs/pisces", { :controller => "water", :action => "fish " })
-
   # PART 3: MORE R→C→A→V PRACTICE
   # ==========================
   
